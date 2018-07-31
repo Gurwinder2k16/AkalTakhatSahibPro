@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/akaltakhatsahib"
+    android:padding="@dimen/root_padding"
+    tools:context="com.akaltakhatsahib.anaadar.akaltakhatsahib.activities.contactUS.ContactUs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/background_overlay_fill"
+        android:orientation="vertical"
+        android:padding="@dimen/root_padding">
+
+        <Button
+            android:id="@+id/Questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Questions" />
+
+        <Button
+            android:id="@+id/Requests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Requests" />
+
+        <Button
+            android:id="@+id/Suggestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Suggestions" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.anaadar.akaltakhatsahibpro">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.contactUS.questionandsuggestions.Question" />
+        <activity android:name=".activities.contactUS.questionandsuggestions.SuggestionsView" />
+        <activity android:name=".activities.contactUS.requests.Requests" />
+        <activity android:name=".activities.contactUS.ContactUs" />
+        <activity android:name=".activities.contactUS.questionandsuggestions.MessageSendActivity" />
+        <!-- menu Details Activity -->
+        <activity
+            android:name=".activities.nitnem.NitnemBani"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.guru_sahiban.GuruSahibanHistory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.news.NewsActivity" />
+        <activity android:name=".activities.mainMenu.Menu" />
+        <activity android:name=".activities.dailyHukamnama.HukamnamaPDF" />
+        <!-- Menus -->
+        <activity android:name=".activities.nitnem.BaniMenus" />
+        <activity android:name=".activities.guru_sahiban.GuruSahibanMenus" />
+        <activity android:name=".activities.pdfpresenterapi.PDFPRESENTER" />
+        <activity
+            android:name=".activities.mainMenu.side_menu_page.MenuDrawer"
+            android:label="@string/title_activity_menu_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Webview.Contact_web"
+            android:label="@string/title_activity_menu_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

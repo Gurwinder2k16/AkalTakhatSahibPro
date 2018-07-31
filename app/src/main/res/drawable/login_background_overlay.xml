@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="@dimen/button_corner_radius" />
+    <stroke
+        android:width="@dimen/button_stroke_width"
+        android:color="@color/button_stroke" />
+    <gradient
+        android:endColor="@color/background_overlay_fill"
+        android:startColor="@color/background_overlay_fill" />
+
+</shape>

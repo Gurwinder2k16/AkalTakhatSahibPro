@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:paddingBottom="55dp">
+
+    <!--  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="false"
+          android:layout_marginLeft="5dp"
+          android:layout_marginRight="5dp"
+          android:orientation="vertical">
+
+          <android.support.v7.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="@dimen/margin_layoutlist_10dp"
+              android:layout_weight="1"
+              android:clipToPadding="false"
+              android:padding="@dimen/activity_horizontal_margin"
+              app:cardCornerRadius="1dp"
+              app:cardElevation="3dp">
+
+              <LinearLayout
+                  android:id="@+id/Guru_Sahiban"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_margin="5dp"
+                  android:layout_weight="1">
+
+                  <ImageButton
+                      android:id="@+id/mGuru_Sahiban"
+                      android:layout_width="@dimen/margin_imagelist"
+                      android:layout_height="@dimen/margin_imagelist"
+                      android:background="@drawable/gurusahiban"
+                      android:scaleType="fitXY" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:layout_margin="@dimen/margin_layoutlist_10dp"
+                      android:text="Guru Sahiban"
+                      android:textAllCaps="true"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+              </LinearLayout>
+          </android.support.v7.widget.CardView>
+
+          <android.support.v7.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="@dimen/margin_layoutlist_10dp"
+              android:layout_weight="1"
+              android:clipToPadding="false"
+              android:padding="@dimen/activity_horizontal_margin"
+              app:cardCornerRadius="1dp"
+              app:cardElevation="3dp">
+
+              <LinearLayout
+                  android:id="@+id/sundar_gutka"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_margin="5dp"
+                  android:layout_weight="1"
+                  android:orientation="horizontal">
+
+                  <ImageButton
+                      android:id="@+id/msundar_gutka"
+                      android:layout_width="70dp"
+                      android:layout_height="70dp"
+                      android:background="@drawable/sundargutka"
+                      android:scaleType="fitXY" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:layout_margin="@dimen/margin_layoutlist_10dp"
+                      android:text="Sunder Gutka"
+                      android:textAllCaps="true"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+              </LinearLayout>
+          </android.support.v7.widget.CardView>
+
+          <android.support.v7.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="@dimen/margin_layoutlist_10dp"
+              android:layout_weight="1"
+              android:clipToPadding="false"
+              android:padding="@dimen/activity_horizontal_margin"
+              app:cardCornerRadius="1dp"
+              app:cardElevation="3dp">
+
+              <LinearLayout
+                  android:id="@+id/hukamnaam"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_margin="5dp"
+                  android:layout_weight="1">
+
+                  <ImageButton
+                      android:id="@+id/mhukamnaam"
+                      android:layout_width="@dimen/margin_imagelist"
+                      android:layout_height="@dimen/margin_imagelist"
+                      android:background="@drawable/hukamnama"
+                      android:scaleType="fitXY" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:layout_margin="@dimen/margin_layoutlist_10dp"
+                      android:text="Daily Hukamnama"
+                      android:textAllCaps="true"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+              </LinearLayout>
+          </android.support.v7.widget.CardView>
+
+          <android.support.v7.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="@dimen/margin_cards_15dp"
+              android:layout_marginTop="@dimen/margin_layoutlist_10dp"
+              android:layout_weight="1"
+              android:clipToPadding="false"
+              android:padding="@dimen/activity_horizontal_margin"
+              app:cardCornerRadius="1dp"
+              app:cardElevation="3dp">
+
+              <LinearLayout
+                  android:id="@+id/Library"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_margin="5dp"
+                  android:layout_weight="1">
+
+                  <ImageButton
+                      android:id="@+id/mLibrary"
+                      android:layout_width="@dimen/margin_imagelist"
+                      android:layout_height="@dimen/margin_imagelist"
+                      android:background="@drawable/library"
+                      android:scaleType="fitXY" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:layout_margin="@dimen/margin_layoutlist_10dp"
+                      android:text="Library"
+                      android:textAllCaps="true"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+              </LinearLayout>
+          </android.support.v7.widget.CardView>-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/background_overlay_fill"
+        android:orientation="vertical">
+        <!-- android:background="@color/background_overlay_fill"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!--Dundar Gutka-->
+            <LinearLayout
+                android:id="@+id/sundar_gutka"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/msundar_gutka"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/sundargutka"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sunder Gutka"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+            <!--Hukam Nama-->
+            <LinearLayout
+                android:id="@+id/hukamnaam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/mhukamnaam"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/hukamnama"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Hukamnama"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!--Guru Sahiban-->
+            <LinearLayout
+                android:id="@+id/Guru_Sahiban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/mGuru_Sahiban"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/gurusahiban"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guru Sahiban"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+            <!--Library-->
+            <LinearLayout
+                android:id="@+id/Library"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/mLibrary"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/library"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Library"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.anaadar.akaltakhatsahibpro.activities.mainMenu.side_menu_page.MenuDrawer">
+
+    <include layout="@layout/activity_menu" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:backgroundTint="#29bc9d"
+        app:backgroundTintMode="src_in"
+        app:rippleColor="#29bc9d"
+        app:srcCompat="@drawable/pause" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical|center_horizontal|start"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:backgroundTint="#29bc9d"
+        app:backgroundTintMode="src_in"
+        app:rippleColor="#29bc9d"
+        app:srcCompat="@drawable/left" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical|center_horizontal|end"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginEnd="0dp"
+        app:backgroundTint="#29bc9d"
+        app:backgroundTintMode="src_in"
+        app:rippleColor="#29bc9d"
+        app:srcCompat="@drawable/right" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:id="@+id/toogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_toStartOf="@+id/segmented_group"
+            android:src="@drawable/round_menu_white_48" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:background="@drawable/layout_corner"
+            android:gravity="center">
+
+            <info.hoang8f.android.segmented.SegmentedGroup
+                android:id="@+id/segmented_group"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_over"
+                android:orientation="horizontal"
+                segmentedgroup:sc_border_width="0.7dp"
+                segmentedgroup:sc_checked_text_color="#FFFFFF"
+                segmentedgroup:sc_corner_radius="7dp">
+
+                <RadioButton
+                    style="@style/RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Banis" />
+
+                <RadioButton
+                    style="@style/RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="MultiMedia" />
+
+                <RadioButton
+                    style="@style/RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Information" />
+            </info.hoang8f.android.segmented.SegmentedGroup>
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

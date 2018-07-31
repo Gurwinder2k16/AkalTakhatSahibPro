@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Listen Nitnem Gurbani ">
+        <menu>
+            <item
+                android:id="@+id/japji_sahib"
+                android:title="Listen Japji Sahib" />
+            <item
+                android:id="@+id/jaap_sahib"
+                android:title="Listen Jaap Sahib" />
+            <item
+                android:id="@+id/savaiye"
+                android:title="Listen Savaiye Sahib" />
+            <item
+                android:id="@+id/Chaupai_Sahib"
+                android:title="Listen Chaupai Sahib" />
+            <item
+                android:id="@+id/anaadshaib"
+                android:title="Listen Anand Sahib" />
+            <item
+                android:id="@+id/rehrass"
+                android:title="Listen Rehrass Sahib" />
+            <item
+                android:id="@+id/ardass"
+                android:title="Listen Ardass" />
+        </menu>
+    </item>
+
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
