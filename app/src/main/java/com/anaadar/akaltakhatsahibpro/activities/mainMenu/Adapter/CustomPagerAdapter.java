@@ -9,19 +9,27 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments.FirstPage;
-import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments.FivePage;
 import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments.FourPage;
 import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments.InstrPage;
 import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments.SecondPage;
-import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments.SixPage;
 import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments.ThirdPage;
 
 
 public class CustomPagerAdapter extends FragmentPagerAdapter {
-    private static int NUM_ITEMS = 7;
+    private static int NUM_ITEMS = 4;
+    private FourPage fourPage;
+    private InstrPage instrPage;
+    private FirstPage firstPage;
+    private SecondPage secondPage;
+    private ThirdPage thirdPage;
 
     public CustomPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
+        fourPage = new FourPage();
+        instrPage = new InstrPage();
+        firstPage = new FirstPage();
+        secondPage = new SecondPage();
+        thirdPage = new ThirdPage();
     }
 
     @Override
@@ -33,19 +41,19 @@ public class CustomPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new FourPage();
+                return fourPage;
             case 1:
-                return new InstrPage();
+                return instrPage;
             case 2:
-                return new FirstPage();
+                return firstPage;
             case 3:
-                return new SecondPage();
-            case 4:
-                return new ThirdPage();
+                return secondPage;
+           /* case 4:
+                return thirdPage;
             case 5:
                 return new FivePage();
             case 6:
-                return new SixPage();
+                return new SixPage();*/
             default:
                 return null;
         }

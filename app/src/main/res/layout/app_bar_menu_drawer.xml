@@ -52,19 +52,22 @@
 
         <ImageButton
             android:id="@+id/toogle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:paddingTop="@dimen/margin_layoutlist_10dp"
+            android:paddingBottom="@dimen/margin_layoutlist_10dp"
             android:background="@null"
+            android:paddingLeft="@dimen/margin_layoutlist_10dp"
             android:scaleType="fitXY"
-            android:layout_toStartOf="@+id/segmented_group"
-            android:src="@drawable/round_menu_white_48" />
+            android:src="@drawable/menu_top" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top|center"
             android:background="@drawable/layout_corner"
-            android:gravity="center">
+            android:gravity="center"
+            android:visibility="gone">
 
             <info.hoang8f.android.segmented.SegmentedGroup
                 android:id="@+id/segmented_group"

@@ -1,74 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="55dp"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/imagecard"
+        <ImageView
+            android:id="@+id/akaltakhatImage"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:background="@drawable/sgpc"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/sgpc" />
+
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="2dp">
+            android:padding="@dimen/margin_layoutlist_10dp"
+            android:text="@string/history_sgpc"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/akaltakhatImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/sgpc"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/sgpc" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/akaltakhatImage"
-                    android:text="@string/history_sgpc"
-                    android:textAlignment="center"
-                    android:layout_centerInParent="true"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
+        <com.codesgood.views.JustifiedTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/imagecard"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="15dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="2dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/SGPC"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-
-        </android.support.v7.widget.CardView>
-
-    </RelativeLayout>
+            android:layout_marginBottom="@dimen/margin_layoutlist_10dp"
+            android:layout_marginLeft="@dimen/margin_layoutlist_10dp"
+            android:layout_marginRight="@dimen/margin_layoutlist_10dp"
+            android:text="@string/SGPC"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
 </ScrollView>

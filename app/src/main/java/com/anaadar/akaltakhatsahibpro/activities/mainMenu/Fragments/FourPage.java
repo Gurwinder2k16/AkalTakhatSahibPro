@@ -1,6 +1,5 @@
 package com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments;
 
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,7 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+import android.widget.LinearLayout;
 
 import com.anaadar.akaltakhatsahibpro.R;
 import com.anaadar.akaltakhatsahibpro.activities.dailyHukamnama.DownloadHukamnama;
@@ -35,17 +34,17 @@ public class FourPage extends Fragment implements OnPageChangeListener, OnLoadCo
     PDFView pdfView;
     Integer pageNumber = 0;
     String pdfFileName;
-    private ProgressDialog pDialog;
+    private LinearLayout pDialog;
+    private DownloadFile mDownloadFile;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.pagefour, container, false);
         // displayFromAsset(SAMPLE_FILE);
         if (Constant.haveNetworkConnection(getActivity())) {
-            pDialog = new ProgressDialog(getActivity());
-            pDialog.setMessage("Please wait...");
-            pDialog.setCancelable(false);
+            pDialog = (LinearLayout) view.findViewById(R.id.progressbarlayout);
             pdfView = (PDFView) view.findViewById(R.id.pdfView);
+         //   pdfView.setVisibility(View.INVISIBLE);
             downloadPDF();
         } else {
             checkNetworkConnection();
@@ -106,9 +105,41 @@ public class FourPage extends Fragment implements OnPageChangeListener, OnLoadCo
     }
 
     public void downloadPDF() {
-        new DownloadFile().execute("http://old.sgpc.net/CDN/Rehat-Maryada-_Punjabi_.pdf", "rehat_maryada.pdf");
+        if (mDownloadFile == null) {
+            mDownloadFile = new DownloadFile();
+            mDownloadFile.execute("http://old.sgpc.net/CDN/Rehat-Maryada-_Punjabi_.pdf", "rehat_maryada.pdf");
+        } else {
+            showDownlodedPDF("rehat_maryada.pdf");
+        }
+    }
+    void showDownlodedPDF(String fileName) {
+        hidepDialog();
+        String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
+        File folder = new File(extStorageDirectory, "PDF DOWNLOAD");
+        File file = new File(folder, fileName);
+        Log.i("File", file.getAbsolutePath() + "");
+        pdfView.setVisibility(View.VISIBLE);
+        pdfView.fromFile(file)
+                .defaultPage(pageNumber)
+                .enableSwipe(true)
+                .swipeHorizontal(false)
+                .onPageChange(FourPage.this)
+                .enableAnnotationRendering(true)
+                .onLoad(FourPage.this)
+                .scrollHandle(new DefaultScrollHandle(getActivity()))
+                .load();
+        pdfFileName = file.getAbsoluteFile().toString();
     }
 
+    private void showpDialog() {
+        if (pDialog.getVisibility() == View.GONE)
+            pDialog.setVisibility(View.VISIBLE);
+    }
+
+    private void hidepDialog() {
+        if (pDialog.getVisibility() == View.VISIBLE)
+            pDialog.setVisibility(View.GONE);
+    }
 
     private class DownloadFile extends AsyncTask<String, Void, Void> {
         String fileUrl;
@@ -135,42 +166,14 @@ public class FourPage extends Fragment implements OnPageChangeListener, OnLoadCo
             }
             DownloadHukamnama.downloadFile(fileUrl, pdfFile);
             return null;
-
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            hidepDialog();
-            Toast.makeText(getActivity(), "Download PDf successfully", Toast.LENGTH_SHORT).show();
-
+            showDownlodedPDF(fileName);
             Log.d("Download complete", "----------");
-            String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
-            File folder = new File(extStorageDirectory, "PDF DOWNLOAD");
-            File file = new File(folder, fileName);
-            Toast.makeText(getActivity(), file.getAbsolutePath(), Toast.LENGTH_SHORT).show();
-            Log.i("File", file.getAbsolutePath() + "");
-            pdfView.fromFile(file)
-                    .defaultPage(pageNumber)
-                    .enableSwipe(true)
-                    .swipeHorizontal(false)
-                    .onPageChange(FourPage.this)
-                    .enableAnnotationRendering(true)
-                    .onLoad(FourPage.this)
-                    .scrollHandle(new DefaultScrollHandle(getActivity()))
-                    .load();
-            pdfFileName = file.getAbsoluteFile().toString();
         }
-    }
-
-    private void showpDialog() {
-        if (!pDialog.isShowing())
-            pDialog.show();
-    }
-
-    private void hidepDialog() {
-        if (pDialog.isShowing())
-            pDialog.dismiss();
     }
 }
 

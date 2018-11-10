@@ -61,7 +61,6 @@ public class AndroidPageCurlActivity extends Activity implements OnClickListener
 			intent = new Intent(this, ListExample.class);
 			break;
 		default:
-			Toast toast = Toast.makeText(this, "Do I missed the button you clicked?", Toast.LENGTH_LONG);
 			toast.show();
 			break;
 		}

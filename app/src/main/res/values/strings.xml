@@ -308,26 +308,26 @@ Sri Guru Gobind Singh Ji thus passed on the succession with due ceremony to the 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    
+
     <string name="sgpc_message">ਸ਼੍ਰੋਮਣੀ ਗੁਰਦੁਆਰਾ ਪ੍ਰਬੰਧਕ ਕਮੇਟੀ ਆਪ ਜੀ ਦਾ gurbwxI dy ਸੰਸਾਰ iਵc ਸਵwgਤ ਕਰਦI ਹੈ [</string>
 
     <string-array name="slogan_punjabi">
-        <item>ਸ਼੍ਰੋਮਣੀ ਗੁਰਦੁਆਰਾ ਪ੍ਰਬੰਧਕ ਕਮੇਟੀ ਆਪ ਜੀ ਦਾ gurbwxI dy ਸੰਸਾਰ iਵc ਸਵwgਤ ਕਰਦI ਹੈ [</item>
-        <item> guruU swihb hI   s`cy  rihbr hn [</item>
-        <item> gurbwxI  Drm  pRrkwS  dw somw hY [</item>
+        <item> ਸ਼੍ਰੋਮਣੀ ਗੁਰਦੁਆਰਾ ਪ੍ਰਬੰਧਕ ਕਮੇਟੀ ਆਪ ਜੀ ਦਾ gurbwxI dy ਸੰਸਾਰ iਵc ਸਵwgਤ ਕਰਦI ਹੈ [</item>
+        <item> guruU swihb hI   s`cy  rihbr hn </item>
+        <item> gurbwxI  Drm  prkwS  dw somw hY [</item>
         <item> isKiejm hI s`cw Drm hY [ </item>
         <item> DrqI gol hY [</item>
         <item> bRihmMf bhuq ivSwl Aqy AnMq hY [</item>
-        <item> swfI DrqI ijhy KrbwN  gRih cMn isqwry Awid hn [</item>
-        <item> is`K kudrq Anuswr jIvn ijaudw hY [</item>
-        <item> gurbwxI dw ismrn pwpW qo mukqI idvwaudw hY [</item>
-        <item> hr is`K hr roz gurduAwrw swihb  jrUr jwvy jI [</item>
+        <item> swfI DrqI ijhy KrbNw  gRih cMn isqwry Awid hn [</item>
+        <item> is`K kudrq Anuswr jIvn ijauNdw hY [</item>
+        <item> gurbwxI dw ismrn pwpW qo mukqI idvwaNudw hY [</item>
+        <item> hr is`K hr roz gurduAwrw swihb  zrUr jwvy jI [</item>
         <item> gurbwxI Awqmk SWqI dw somw hY [</item>
         <item> guruU swihb swnUM  ipAwr krdy hn [</item>
         <item> guruU swihbwn ny swfy sU`KW leI kurbwnIAW id`qIAW [</item>
         <item> guruU swihb dI god s`b KuSIAW nwl BrI hoeI hY [</item>
         <item> gurbwxI sb sU`KW dw swgr hY [</item>
-        <item> SRI hrmMdr swihb is`KI dw kyˆdr hY [</item>
+        <item> SRI hirmMdr swihb is`KI dw kyˆdr hY [</item>
     </string-array>
     <string name="instruction">jrUrI bynqI \n
 Awp jI bhuq hI vfBwgI ho jo gurbwxI dy rwsqy qy c`l pey ho [\n
@@ -338,4 +338,33 @@ Awp jI nUM bynqI hY, ik  Awp guruU  swihbwn dy siqkwr* vjo isr Fk lvo jI Aqy ju`
 *gurbwxI dI  auq`mqw nUM  siqkwr dyx leI  isr Fkxw jrUrI  hY jI [ \n
 *isr aup`r dsqwr, kyskI, cMunI sjwauuxw is`K siBAwcwr hY jI [ \n
     </string>
+    <string name="about_sri_akal_takhat_sahib_ji">About Sri Akal Takhat Sahib Ji</string>
+    <string name="about_sgpc">About SGPC</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="listen_ardass">Gurbani Ardass</string>
+    <string name="listen_rehrass_sahib">Gurbani Rehrass Sahib</string>
+    <string name="listen_anand_sahib">Gurbani Anand Sahib</string>
+    <string name="listen_chaupai_sahib">Gurbani Chaupai Sahib</string>
+    <string name="listen_savaiye_sahib">Gurbani Savaiye Sahib</string>
+    <string name="listen_jaap_sahib">Gurbani Jaap Sahib</string>
+    <string name="listen_japji_sahib">Gurbani Japji Sahib</string>
+    <string name="about">About</string>
+    <string name="listen_nitnem_gurbani">Listen Nitnem Gurbani\'s</string>
+    <string name="communicate">Communicate</string>
+    <string name="sundar_gutka">\nSundar Gutka\nਸੁੰਦਰ ਗੁਟਕਾ</string>
+    <string name="dialy_hukamnama">\nHukamnama\nਹੁਕਮਨਾਮਾ</string>
+    <string name="guru_sahiban">\nGuru Sahiban\nਗੁਰੂ ਸਾਹਿਬਾਨ</string>
+    <string name="library">\nLibrary\nਕਿਤਾਬ ਘਰ</string>
+    <string name="live_kirtan">\nLive Kirtan\nਲਾਈਵ ਕੀਰਤਨ</string>
+    <string name="monthly_events">\nMonthly Events\nਮਹੀਨਾਵਾਰ ਸਮਾਗਮ</string>
+    <string name="yearlu_events">\nYearly Events\nਸਲਾਨਾ ਸਮਾਗਮ</string>
+    <string name="special_days">\nSpecial Days\nਵਿਸ਼ੇਸ਼ ਦਿਨ</string>
+    <string name="upcoming_events">\nUpcoming Events\nਆਉਣ ਵਾਲੇ ਸਮਾਗਮ</string>
+    <string name="contact_us">\nContact Us\nਸੰਪਰਕ ਕਰੋ</string>
+    <string name="livetelecasts">\nLive Telecasts\n(Upcoming-ਲਾਈਵ)</string>
+    <string name="sgpc_fullname">Shiromani Gurdwara Parbandhak Committee</string>
+    <string name="please_wait_while_content_is_loading">Please wait while content is loading...</string>
+    <string name="play_kirtan">Live Kirtan\n(PLAY)</string>
+    <string name="aim">\nPurpose\nਮਨੋਰਥ</string>
 </resources>

@@ -34,37 +34,30 @@ public class BaniMenus extends AppCompatActivity {
                 switch (arg2) {
                     case 0:
                         Constants.file = "japjiSahib";
-                        Toast.makeText(BaniMenus.this, String.valueOf(arg2), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(BaniMenus.this, NitnemBani.class));
                         break;
                     case 1:
                         Constants.file = "jaapSahib";
-                        Toast.makeText(BaniMenus.this, String.valueOf(Constants.file), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(BaniMenus.this, NitnemBani.class));
                         break;
                     case 2:
                         Constants.file = "anandSahib";
-                        Toast.makeText(BaniMenus.this, String.valueOf(Constants.file), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(BaniMenus.this, NitnemBani.class));
                         break;
                     case 3:
                         Constants.file = "tavPrasadSvayeae";
-                        Toast.makeText(BaniMenus.this, String.valueOf(Constants.file), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(BaniMenus.this, NitnemBani.class));
                         break;
                     case 4:
                         Constants.file = "kabyo_bach_baynti";
-                        Toast.makeText(BaniMenus.this, String.valueOf(Constants.file), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(BaniMenus.this, NitnemBani.class));
                         break;
                     case 5:
                         Constants.file = "rehraasSahib";
-                        Toast.makeText(BaniMenus.this, String.valueOf(Constants.file), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(BaniMenus.this, NitnemBani.class));
                         break;
                     case 6:
                         Constants.file = "sukhmaniSahib";
-                        Toast.makeText(BaniMenus.this, String.valueOf(Constants.file), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(BaniMenus.this, NitnemBani.class));
                         break;
                 }

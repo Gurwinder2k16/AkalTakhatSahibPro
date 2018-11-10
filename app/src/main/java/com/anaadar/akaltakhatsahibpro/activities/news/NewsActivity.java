@@ -9,7 +9,6 @@ import android.util.Log;
 
 import com.anaadar.akaltakhatsahibpro.R;
 import com.anaadar.akaltakhatsahibpro.activities.news.Model.DataModel;
-import com.anaadar.akaltakhatsahibpro.activities.news.Model.NewsModel;
 import com.anaadar.akaltakhatsahibpro.activities.news.RecycleView.CustomAdapter;
 import com.anaadar.akaltakhatsahibpro.constants.Constant;
 import com.google.firebase.database.DataSnapshot;
@@ -39,8 +38,8 @@ public class NewsActivity extends AppCompatActivity {
         if (Constant.haveNetworkConnection(this)) {
             firebaseInit();
             getValue();
-        /*recycleView*/
-            recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+            /*recycleView*/
+            recyclerView = findViewById(R.id.my_recycler_view);
             recyclerView.setHasFixedSize(true);
             layoutManager = new LinearLayoutManager(NewsActivity.this);
             recyclerView.setLayoutManager(layoutManager);
@@ -62,8 +61,8 @@ public class NewsActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 DataModel dataModel = new DataModel();
                 for (DataSnapshot noteSnapshot : dataSnapshot.getChildren()) {
-                    Map<String, Object> mmap = (HashMap<String, Object>)dataSnapshot.getValue();
-                    dataModel=(DataModel)mmap.get("news");
+                    Map<String, Object> mmap = (HashMap<String, Object>) dataSnapshot.getValue();
+                    dataModel = (DataModel) mmap.get("news");
                     Log.e("size", String.valueOf(dataModel.getUrl()));
                 }
                 adapter.notifyDataSetChanged();

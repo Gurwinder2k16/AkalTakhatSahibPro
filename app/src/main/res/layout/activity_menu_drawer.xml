@@ -9,6 +9,7 @@
     tools:openDrawer="start">
 
     <include
+        android:fitsSystemWindows="true"
         layout="@layout/app_bar_menu_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

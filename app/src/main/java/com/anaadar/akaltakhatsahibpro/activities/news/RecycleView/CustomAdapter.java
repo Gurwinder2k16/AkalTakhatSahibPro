@@ -4,13 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.anaadar.akaltakhatsahibpro.R;
 import com.anaadar.akaltakhatsahibpro.Webview.Contact_web;
@@ -86,7 +86,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 }
             });
         } catch (Exception e) {
-            Toast.makeText(con, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 

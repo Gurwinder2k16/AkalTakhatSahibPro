@@ -2,6 +2,7 @@ package com.anaadar.akaltakhatsahibpro.activities.mainMenu.side_menu_page;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -19,7 +20,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -28,6 +28,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.anaadar.akaltakhatsahibpro.R;
+import com.anaadar.akaltakhatsahibpro.activities.About.Activities.AboutAkalTakhatSahib;
+import com.anaadar.akaltakhatsahibpro.activities.About.Activities.AboutSGPC;
 import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Adapter.CustomPagerAdapter;
 import com.anaadar.akaltakhatsahibpro.constants.Constant;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -168,29 +170,6 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
         alertDialog.show();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_drawer, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            showAbout();
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -210,8 +189,11 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
             initExoplayer(" http://sgpc.net/nitnem2/Rehraas%20sahib.mp3\n");
         } else if (id == R.id.ardass) {
             initExoplayer("http://sgpc.net/nitnem2/Ardaas.mp3");
+        } else if (id == R.id.nav_about_akaltakhat) {
+            startActivity(new Intent(this, AboutAkalTakhatSahib.class));
+        } else if (id == R.id.nav_about_sgpc) {
+            startActivity(new Intent(this, AboutSGPC.class));
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -245,7 +227,7 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
         int defaultColor = textView.getTextColors().getDefaultColor();
         textView.setTextColor(defaultColor);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setIcon(R.drawable.sundargutka);
+        builder.setIcon(R.drawable.gurugranthji);
         builder.setTitle(R.string.app_name);
         builder.setView(messageView);
         builder.create();

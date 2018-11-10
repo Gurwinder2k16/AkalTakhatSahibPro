@@ -14,6 +14,7 @@ import com.google.android.exoplayer2.SimpleExoPlayer;
 
 public class Constant {
     public static SimpleExoPlayer player;
+    public static boolean RadioIsplay = false;
 
     public static boolean haveNetworkConnection(Context context) {
         boolean haveConnectedWifi = false;
@@ -46,6 +47,7 @@ public class Constant {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
     public static void checkNetworkConnectionWithoutExit(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("No internet Connection!!");

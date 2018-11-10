@@ -2,20 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gursher_back">
+    android:background="@color/yellow_lite_back">
 
     <ImageView
         android:id="@+id/splashImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/matrix" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/margin_cards_15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splash" />
 
     <ImageView
         android:id="@+id/sgpclogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:adjustViewBounds="true"
         android:cropToPadding="false"

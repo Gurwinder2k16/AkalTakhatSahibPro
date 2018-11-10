@@ -16,7 +16,7 @@
             android:id="@+id/detailLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/border3"
+            android:background="@drawable/frame"
             android:padding="@dimen/bani_layout_padding">
 
             <TextView

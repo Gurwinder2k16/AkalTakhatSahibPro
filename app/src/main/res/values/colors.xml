@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#8a58857e</color>
+    <color name="colorPrimaryDark">#8a58857e</color>
+    <color name="colorAccent">#8a58857e</color>
+    <!--<color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#3F51B5</color>
     <color name="colorAccent">#FF4081</color>
+    -->
     <color name="text_foreground_color">#000000</color>
     <!--Button focused or remove-->
     <color name="button_stroke">#5e7974</color>
@@ -16,5 +20,7 @@
     <color name="CustomAcent">#c7f71b66</color>
     <color name="pageback">#FFF8C1</color>
     <color name="gursher_back">#FFFFFF</color>
+    <color name="yellow_lite_back">#FDFBF3</color>
     <color name="black">#000000</color>
+    <color name="grey">#0D7d7d7d</color>
 </resources>

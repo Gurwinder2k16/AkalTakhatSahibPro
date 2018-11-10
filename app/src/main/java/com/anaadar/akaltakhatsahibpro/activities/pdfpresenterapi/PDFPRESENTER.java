@@ -38,7 +38,6 @@ public class PDFPRESENTER extends AppCompatActivity implements OnPageChangeListe
         setContentView(R.layout.activity_pdf_view);
         identifier = getIntent().getStringExtra("identifier");
         identifierName = getIntent().getStringExtra("identifierName");
-        Toast.makeText(PDFPRESENTER.this, identifier + "" + identifierName, Toast.LENGTH_LONG).show();
        if(Constant.haveNetworkConnection(this)) {
            pDialog = new ProgressDialog(this);
            pDialog.setMessage("Please wait...");
@@ -101,13 +100,11 @@ public class PDFPRESENTER extends AppCompatActivity implements OnPageChangeListe
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             hidepDialog();
-            Toast.makeText(getApplicationContext(), "Download PDf successfully", Toast.LENGTH_SHORT).show();
 
             Log.d("Download complete", "----------");
             String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
             File folder = new File(extStorageDirectory, "PDF DOWNLOAD");
             File file = new File(folder, fileName);
-            Toast.makeText(getApplicationContext(), file.getAbsolutePath(), Toast.LENGTH_SHORT).show();
             Log.i("File", file.getAbsolutePath() + "");
             pdfView.fromFile(file)
                     .defaultPage(num)

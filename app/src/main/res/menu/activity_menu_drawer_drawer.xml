@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-    <item android:title="Listen Nitnem Gurbani ">
+    <item android:title="@string/listen_nitnem_gurbani">
         <menu>
             <item
                 android:id="@+id/japji_sahib"
-                android:title="Listen Japji Sahib" />
+                android:title="@string/listen_japji_sahib" />
             <item
                 android:id="@+id/jaap_sahib"
-                android:title="Listen Jaap Sahib" />
+                android:title="@string/listen_jaap_sahib" />
             <item
                 android:id="@+id/savaiye"
-                android:title="Listen Savaiye Sahib" />
+                android:title="@string/listen_savaiye_sahib" />
             <item
                 android:id="@+id/Chaupai_Sahib"
-                android:title="Listen Chaupai Sahib" />
+                android:title="@string/listen_chaupai_sahib" />
             <item
                 android:id="@+id/anaadshaib"
-                android:title="Listen Anand Sahib" />
+                android:title="@string/listen_anand_sahib" />
             <item
                 android:id="@+id/rehrass"
-                android:title="Listen Rehrass Sahib" />
+                android:title="@string/listen_rehrass_sahib" />
             <item
                 android:id="@+id/ardass"
-                android:title="Listen Ardass" />
+                android:title="@string/listen_ardass" />
+        </menu>
+    </item>
+    <item android:title="@string/about">
+        <menu>
+            <item
+                android:id="@+id/nav_about_akaltakhat"
+                android:title="@string/about_sri_akal_takhat_sahib_ji" />
+            <item
+                android:id="@+id/nav_about_sgpc"
+                android:title="@string/about_sgpc" />
         </menu>
     </item>
 
-
-    <item android:title="Communicate">
+    <item android:title="@string/communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/share" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="@string/send" />
         </menu>
     </item>
-
 </menu>

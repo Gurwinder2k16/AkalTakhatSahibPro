@@ -91,13 +91,11 @@ public class HukamnamaPDF extends Activity implements OnPageChangeListener {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             hidepDialog();
-            Toast.makeText(getApplicationContext(), "Download PDf successfully", Toast.LENGTH_SHORT).show();
 
             Log.d("Download complete", "----------");
             String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
             File folder = new File(extStorageDirectory, "PDF DOWNLOAD");
             File file = new File(folder, fileName);
-            Toast.makeText(getApplicationContext(), file.getAbsolutePath(), Toast.LENGTH_SHORT).show();
             Log.i("File", file.getAbsolutePath() + "");
             pdfView.fromFile(file)
                     .defaultPage(num)

@@ -1,136 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="55dp"
-    android:layout_marginTop="10dp"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:alpha="1"
-        android:background="@color/background_overlay_fill"
-        android:orientation="vertical">
-
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <!-- android:background="@color/background_overlay_fill"-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
             android:layout_weight="1"
             android:orientation="horizontal">
-            <!--Kirtan-->
-            <LinearLayout
-                android:id="@+id/daily_news"
+            <!--Dundar Gutka-->
+            <Button
+                android:id="@+id/this_month"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:background="@drawable/tiles_images"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/monthly_events"
+                android:textAllCaps="false"
+                tools:ignore="ButtonStyle,NestedWeights" />
 
-                <ImageButton
-                    android:id="@+id/mdaily_news"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/news"
-                    android:scaleType="fitXY" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Daily News"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
-            <!--Live Kirtan-->
-            <LinearLayout
-                android:id="@+id/contactUs"
+            <Button
+                android:id="@+id/this_year"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <ImageButton
-                    android:id="@+id/mcontactUs"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/contact"
-                    android:scaleType="fitXY" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Contact Us"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
+                android:background="@drawable/tiles_images"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/yearlu_events"
+                android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
             android:layout_weight="1"
             android:orientation="horizontal">
-            <!--Live Video-->
-            <LinearLayout
-                android:id="@+id/live_kirtan"
+            <!--Guru Sahiban-->
+            <Button
+                android:id="@+id/special_days"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:background="@drawable/tiles_images"
+                android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/special_days"
+                android:textAllCaps="false"
+                tools:ignore="NestedWeights" />
 
-                <ImageButton
-                    android:id="@+id/mlive_kirtan"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/radio"
-                    android:scaleType="fitXY" />
+            <Button
+                android:id="@+id/upcoming_event"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_layoutlist_10dp"
+                android:layout_weight="1"
+                android:background="@drawable/tiles_images"
+                android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/upcoming_events"
+                android:textAllCaps="false" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Live Kirtan"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
-            <!--Katha-->
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!--Guru Sahiban-->
+            <Button
                 android:id="@+id/live_video"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:background="@drawable/tiles_images"
+                android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/livetelecasts"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
 
-                <ImageButton
-                    android:id="@+id/mlive_video"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/video"
-                    android:scaleType="fitXY" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Live Video"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/purpose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_layoutlist_10dp"
+                android:layout_weight="1"
+                android:background="@drawable/tiles_images"
+                android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/aim"
+                android:textAllCaps="false"
+                tools:ignore="NestedWeights" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
