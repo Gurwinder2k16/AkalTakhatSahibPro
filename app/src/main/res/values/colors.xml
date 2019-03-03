@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#8a58857e</color>
+ <!--   <color name="colorPrimary">#8a58857e</color>
     <color name="colorPrimaryDark">#8a58857e</color>
-    <color name="colorAccent">#8a58857e</color>
-    <!--<color name="colorPrimary">#3F51B5</color>
+    <color name="colorAccent">#8a58857e</color>-->
+    <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#3F51B5</color>
     <color name="colorAccent">#FF4081</color>
-    -->
     <color name="text_foreground_color">#000000</color>
     <!--Button focused or remove-->
     <color name="button_stroke">#5e7974</color>

@@ -16,7 +16,7 @@
         <!-- android:background="@color/background_overlay_fill"-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:orientation="horizontal">
             <!--Dundar Gutka-->
@@ -24,11 +24,14 @@
                 android:id="@+id/this_month"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/monthly_events"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 tools:ignore="ButtonStyle,NestedWeights" />
 
@@ -36,17 +39,20 @@
                 android:id="@+id/this_year"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/yearlu_events"
+                android:textAlignment="center"
                 android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:orientation="horizontal">
             <!--Guru Sahiban-->
@@ -54,12 +60,15 @@
                 android:id="@+id/special_days"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
                 android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/special_days"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 tools:ignore="NestedWeights" />
 
@@ -67,18 +76,21 @@
                 android:id="@+id/upcoming_event"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
                 android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/upcoming_events"
+                android:textAlignment="center"
                 android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:orientation="horizontal">
             <!--Guru Sahiban-->
@@ -86,10 +98,12 @@
                 android:id="@+id/live_video"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
                 android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/livetelecasts"
                 android:textAlignment="center"
@@ -99,12 +113,15 @@
                 android:id="@+id/purpose"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
                 android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/aim"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 tools:ignore="NestedWeights" />
         </LinearLayout>

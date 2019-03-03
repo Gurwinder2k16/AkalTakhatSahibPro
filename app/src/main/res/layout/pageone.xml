@@ -18,7 +18,7 @@
         <!-- android:background="@color/background_overlay_fill"-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -27,11 +27,14 @@
                 android:id="@+id/sundar_gutka"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/sundar_gutka"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 tools:ignore="NestedWeights" />
 
@@ -39,17 +42,20 @@
                 android:id="@+id/hukamnaam"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/dialy_hukamnama"
+                android:textAlignment="center"
                 android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -58,12 +64,15 @@
                 android:id="@+id/Guru_Sahiban"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
                 android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/guru_sahiban"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 tools:ignore="NestedWeights" />
 
@@ -71,18 +80,21 @@
                 android:id="@+id/Library"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
                 android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/library"
+                android:textAlignment="center"
                 android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -91,11 +103,14 @@
                 android:id="@+id/contactUs"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
                 android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
                 android:text="@string/contact_us"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 tools:ignore="NestedWeights" />
 
@@ -103,10 +118,12 @@
                 android:id="@+id/live_kirtan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/margin_layoutlist_10dp"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
                 android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
                 android:text="@string/live_kirtan"
                 android:textAlignment="center"
                 android:textAllCaps="false" />

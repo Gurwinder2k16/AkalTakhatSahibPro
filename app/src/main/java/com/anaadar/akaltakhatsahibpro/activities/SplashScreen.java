@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anaadar.akaltakhatsahibpro.R;
+import com.anaadar.akaltakhatsahibpro.activities.dailyHukamnama.HukamnamaPDF;
 import com.anaadar.akaltakhatsahibpro.activities.mainMenu.side_menu_page.MenuDrawer;
+import com.anaadar.akaltakhatsahibpro.constants.Constant;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class SplashScreen extends AppCompatActivity {
     // Splash screen timer
@@ -31,8 +39,10 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
         // initInstruction();
         checkPermissions();
+        initFireBase();
     }
 
    /* private void initInstruction() {
@@ -119,14 +129,20 @@ public class SplashScreen extends AppCompatActivity {
 
     private void proceedAfterPermission() {
         //We've got the permission, now we can proceed further
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i = new Intent(SplashScreen.this, MenuDrawer.class);
-                startActivity(i);
-                finish();
-            }
-        }, SPLASH_TIME_OUT);
+        if (getIntent().hasExtra(Constant.hukamnama)) {
+            Intent i = new Intent(SplashScreen.this, HukamnamaPDF.class);
+            startActivity(i);
+            finish();
+        } else {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent i = new Intent(SplashScreen.this, MenuDrawer.class);
+                    startActivity(i);
+                    finish();
+                }
+            }, SPLASH_TIME_OUT);
+        }
 
     }
 
@@ -190,5 +206,15 @@ public class SplashScreen extends AppCompatActivity {
                 proceedAfterPermission();
             }
         }
+    }
+
+    public void initFireBase() {
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        String token = task.getResult().getToken();
+                    }
+                });
     }
 }

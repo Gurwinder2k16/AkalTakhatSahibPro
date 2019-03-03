@@ -193,6 +193,8 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
             startActivity(new Intent(this, AboutAkalTakhatSahib.class));
         } else if (id == R.id.nav_about_sgpc) {
             startActivity(new Intent(this, AboutSGPC.class));
+        } else if (id == R.id.nav_share) {
+            shareApp();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -234,10 +236,12 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
         builder.show();
     }
 
+    final Handler handler = new Handler();
+    private Runnable updateTask;
+
     private void startComments() {
         final int length = getResources().getStringArray(R.array.slogan_punjabi).length - 1;
-        final Handler handler = new Handler();
-        final Runnable updateTask = new Runnable() {
+        updateTask = new Runnable() {
             @Override
             public void run() {
                 if (index > length) {
@@ -296,5 +300,25 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
         });
         AlertDialog dialog = alert.create();
         dialog.show();
+    }
+
+    void shareApp() {
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "Download Gurbani Darshan official application by Sri Akal Takhat Sahib Link : https://play.google.com/store/apps/details?id=com.anaadar.akaltakhatsahibpro&hl=en_IN";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Download Gurbani Darshan Android App");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (handler != null) {
+            handler.removeCallbacks(null);
+        }
+        if (handler != null && updateTask != null) {
+            handler.removeCallbacks(updateTask);
+        }
+        super.onDestroy();
     }
 }

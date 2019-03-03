@@ -13,6 +13,7 @@ import com.google.android.exoplayer2.SimpleExoPlayer;
  */
 
 public class Constant {
+    public static String hukamnama="hukamnama";
     public static SimpleExoPlayer player;
     public static boolean RadioIsplay = false;
 

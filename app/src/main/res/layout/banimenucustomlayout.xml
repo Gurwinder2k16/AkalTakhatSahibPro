@@ -3,6 +3,9 @@
     android:id="@+id/lists_text_style"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
     android:padding="16dp"
+    android:textAlignment="center"
     android:textColor="@color/black"
     android:textSize="18sp" />
