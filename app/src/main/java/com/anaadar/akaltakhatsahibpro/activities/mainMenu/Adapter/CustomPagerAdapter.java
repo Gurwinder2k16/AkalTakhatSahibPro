@@ -16,7 +16,7 @@ import com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments.ThirdPage;
 
 
 public class CustomPagerAdapter extends FragmentPagerAdapter {
-    private static int NUM_ITEMS = 4;
+    private static int NUM_ITEMS = 5;
     private FourPage fourPage;
     private InstrPage instrPage;
     private FirstPage firstPage;
@@ -48,9 +48,9 @@ public class CustomPagerAdapter extends FragmentPagerAdapter {
                 return firstPage;
             case 3:
                 return secondPage;
-           /* case 4:
+            case 4:
                 return thirdPage;
-            case 5:
+           /* case 5:
                 return new FivePage();
             case 6:
                 return new SixPage();*/

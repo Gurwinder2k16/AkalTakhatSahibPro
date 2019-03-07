@@ -1,134 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="55dp">
+    android:orientation="vertical">
 
- <!--   <LinearLayout
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="@color/background_overlay_fill"
-        android:orientation="vertical">
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        android:paddingBottom="@dimen/margin_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65"
+        tools:ignore="UselessParent">
+        <!-- android:background="@color/background_overlay_fill"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!--Dundar Gutka-->
+            <Button
+                android:id="@+id/bt_sikhm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_layoutlist_10dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@drawable/tiles_images"
+                android:gravity="center"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/what_is_sikhism"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                tools:ignore="ButtonStyle,NestedWeights" />
+
+            <Button
+                android:id="@+id/bcm_sikh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/margin_layoutlist_10dp"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@drawable/tiles_images"
+                android:gravity="center"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/how_to_bcm_sikh"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="148dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
-            &lt;!&ndash;Special Days&ndash;&gt;
-            <LinearLayout
+            android:orientation="horizontal"
+            android:visibility="invisible">
+            <!--Guru Sahiban-->
+            <Button
                 android:id="@+id/special_days"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_layoutlist_10dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:background="@drawable/tiles_images"
+                android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/special_days"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                tools:ignore="NestedWeights" />
 
-                <ImageButton
-                    android:id="@+id/mspecial_days"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/specialdays"
-                    android:scaleType="fitXY" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Special Days"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    android:textSize="10sp" />
-            </LinearLayout>
-            &lt;!&ndash;this month&ndash;&gt;
-            <LinearLayout
-                android:id="@+id/this_month"
+            <Button
+                android:id="@+id/upcoming_event"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/margin_layoutlist_10dp"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <ImageButton
-                    android:id="@+id/mthis_month"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/thismonth"
-                    android:scaleType="fitXY" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="This Month Duites"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
+                android:background="@drawable/tiles_images"
+                android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/upcoming_events"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            &lt;!&ndash;this year&ndash;&gt;
-            <LinearLayout
-                android:id="@+id/this_year"
+            android:layout_height="148dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+            <!--Guru Sahiban-->
+            <Button
+                android:id="@+id/live_video"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_layoutlist_10dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:background="@drawable/tiles_images"
+                android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/livetelecasts"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
 
-                <ImageButton
-                    android:id="@+id/mthis_year"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/specialprogram"
-                    android:scaleType="fitXY" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Special Programmes"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    android:textSize="10sp" />
-            </LinearLayout>
-            &lt;!&ndash;upcoming&ndash;&gt;
-            <LinearLayout
-                android:id="@+id/upcoming_event"
+            <Button
+                android:id="@+id/purpose"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/margin_layoutlist_10dp"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <ImageButton
-                    android:id="@+id/mupcoming_event"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/upcoming"
-                    android:scaleType="fitXY"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Upcoming Events"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
+                android:background="@drawable/tiles_images"
+                android:drawablePadding="@dimen/margin_layoutlist_10dp"
+                android:gravity="center"
+                android:padding="@dimen/margin_layoutlist_10dp"
+                android:text="@string/aim"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                tools:ignore="NestedWeights" />
         </LinearLayout>
-    </LinearLayout>-->
-</RelativeLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
