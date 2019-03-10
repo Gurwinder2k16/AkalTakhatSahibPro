@@ -34,41 +34,37 @@ import java.util.Map;
 public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        if (remoteMessage.getData().size() > 0) {
-            showForgroundNotification(remoteMessage);
-        } else {
-            showBackgroundNotification(remoteMessage);
-        }
+        showForgroundNotification(remoteMessage);
     }
 
     public void showForgroundNotification(RemoteMessage remoteMessage) {
         Map<String, String> pMessageList = remoteMessage.getData();
-        if (pMessageList.containsKey("PlayRadio")) {
+        if (pMessageList.containsKey(Constant.playRadio)) {
             showMessage(
-                    "101",
-                    "akaltakhatsahibapp",
+                    Constant.channelID,
+                    Constant.channelName,
                     getResources().getString(R.string.app_name),
-                    pMessageList.get("PlayRadio"),
+                    pMessageList.get(Constant.playRadio),
                     true,
                     false,
                     false
             );
-        } else if (pMessageList.containsKey("HukamnamaSahib")) {
+        } else if (pMessageList.containsKey(Constant.hukamnama)) {
             showMessage(
-                    "101",
-                    "akaltakhatsahibapp",
+                    Constant.channelID,
+                    Constant.channelName,
                     getResources().getString(R.string.app_name),
-                    pMessageList.get("HukamnamaSahib"),
+                    pMessageList.get(Constant.hukamnama),
                     false,
                     true,
                     false
             );
         } else {
             showMessage(
-                    "101",
-                    "akaltakhatsahibapp",
+                    Constant.channelID,
+                    Constant.channelName,
                     getResources().getString(R.string.app_name),
-                    pMessageList.get("Message"),
+                    pMessageList.get(Constant.message),
                     false,
                     false,
                     true
@@ -169,8 +165,8 @@ public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
                 if (data != null) {
                     if (data.pHukamnamaShib != null && data.pHukamnamaShib) {
                         showMessage(
-                                "101",
-                                "akaltakhatsahibapp",
+                                Constant.channelID,
+                                Constant.channelName,
                                 getResources().getString(R.string.app_name),
                                 data.pDesc,
                                 false,
@@ -180,8 +176,8 @@ public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
                     }
                     if (data.pPlayRadio != null && data.pPlayRadio) {
                         showMessage(
-                                "101",
-                                "akaltakhatsahibapp",
+                                Constant.channelID,
+                                Constant.channelName,
                                 getResources().getString(R.string.app_name),
                                 data.pDesc,
                                 true,
@@ -191,8 +187,8 @@ public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
                     }
                     if (data.pMessage != null && !data.pMessage.isEmpty()) {
                         showMessage(
-                                "101",
-                                "akaltakhatsahibapp",
+                                Constant.channelID,
+                                Constant.channelName,
                                 getResources().getString(R.string.app_name),
                                 data.pDesc,
                                 false,

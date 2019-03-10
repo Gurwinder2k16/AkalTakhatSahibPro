@@ -15,6 +15,9 @@ import com.google.android.exoplayer2.SimpleExoPlayer;
 public class Constant {
     public static String hukamnama="HukamnamaSahib";
     public static String playRadio="PlayRadio";
+    public static String message="Message";
+    public static String channelName="akaltakhatsahibapp";
+    public static String channelID="101";
     public static SimpleExoPlayer player;
     public static boolean RadioIsplay = false;
 
