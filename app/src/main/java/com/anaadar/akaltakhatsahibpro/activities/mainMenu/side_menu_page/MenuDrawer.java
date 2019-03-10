@@ -55,6 +55,7 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
     int index = 0;
     TextView textView;
     ViewPager viewPager;
+    CustomPagerAdapter mCustomPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,8 +106,7 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
         } catch (Exception e) {
 
         }
-
-
+        mCustomPagerAdapter = new CustomPagerAdapter(getSupportFragmentManager());
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
       /*  ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);*/
@@ -121,8 +121,7 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        viewPager.setAdapter(new CustomPagerAdapter(getSupportFragmentManager()));
+        viewPager.setAdapter(mCustomPagerAdapter);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -142,8 +141,21 @@ public class MenuDrawer extends AppCompatActivity implements NavigationView.OnNa
             }
         });
         viewPager.setCurrentItem(1);
-
         startComments();
+        Bundle bundle = getIntent().getExtras();
+        if ((bundle != null && bundle.containsKey(Constant.playRadio)) ||
+                (getIntent().hasExtra(Constant.playRadio) && getIntent().getBooleanExtra(Constant.playRadio, false))) {
+            viewPager.setCurrentItem(2);
+        }
+    }
+
+    public boolean checkAndPlay() {
+        Bundle bundle = getIntent().getExtras();
+        if ((bundle != null && bundle.containsKey(Constant.playRadio)) ||
+                (getIntent().hasExtra(Constant.playRadio) && getIntent().getBooleanExtra(Constant.playRadio, false))) {
+            return true;
+        }
+        return false;
     }
 
     @Override

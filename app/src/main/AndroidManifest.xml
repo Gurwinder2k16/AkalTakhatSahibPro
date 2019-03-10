@@ -75,7 +75,11 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.dailyHukamnama.HukamnamaPDF"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.hukamnamasahib" />
+            </intent-filter>
+        </activity>
         <!-- Menus -->
         <activity
             android:name=".activities.nitnem.BaniMenus"
@@ -90,7 +94,11 @@
             android:name=".activities.mainMenu.side_menu_page.MenuDrawer"
             android:label="@string/title_activity_menu_drawer"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.playradio" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Webview.Contact_web"
             android:label="@string/title_activity_menu_drawer"
@@ -120,9 +128,9 @@
             </intent-filter>
         </service>
 
-        <meta-data
+        <!--<meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="101" />
+            android:value="101" />-->
     </application>
 
 </manifest>

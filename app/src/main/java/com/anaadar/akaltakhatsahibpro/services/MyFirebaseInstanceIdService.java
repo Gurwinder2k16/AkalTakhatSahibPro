@@ -27,22 +27,41 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.google.gson.Gson;
 
 import java.util.Map;
 
 public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+        if (remoteMessage.getData().size() > 0) {
+            showForgroundNotification(remoteMessage);
+        } else {
+            showBackgroundNotification(remoteMessage);
+        }
+    }
+
+    public void showForgroundNotification(RemoteMessage remoteMessage) {
         Map<String, String> pMessageList = remoteMessage.getData();
         if (pMessageList.containsKey("PlayRadio")) {
-            initExoplayer();
+            showMessage(
+                    "101",
+                    "akaltakhatsahibapp",
+                    getResources().getString(R.string.app_name),
+                    pMessageList.get("PlayRadio"),
+                    true,
+                    false,
+                    false
+            );
         } else if (pMessageList.containsKey("HukamnamaSahib")) {
             showMessage(
                     "101",
                     "akaltakhatsahibapp",
                     getResources().getString(R.string.app_name),
                     pMessageList.get("HukamnamaSahib"),
-                    true
+                    false,
+                    true,
+                    false
             );
         } else {
             showMessage(
@@ -50,12 +69,20 @@ public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
                     "akaltakhatsahibapp",
                     getResources().getString(R.string.app_name),
                     pMessageList.get("Message"),
-                    false
+                    false,
+                    false,
+                    true
             );
         }
     }
 
-    void showMessage(String pChanneld, String pChannelName, String pTitle, String pMessage, boolean showHukamNama) {
+    public void showMessage(String pChanneld,
+                            String pChannelName,
+                            String pTitle,
+                            String pMessage,
+                            boolean listenHukamnama,
+                            boolean showHukamNama,
+                            boolean showSimpeMessage) {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel notificationChannel = new NotificationChannel(
                     pChanneld,
@@ -74,7 +101,10 @@ public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
                     .setSmallIcon(R.drawable.sgpclogo);
             Intent notificationIntent = new Intent(this, SplashScreen.class);
             if (showHukamNama) {
-                notificationIntent.putExtra(Constant.hukamnama, showHukamNama);
+                notificationIntent = setHukamnamSahib(notificationIntent);
+            }
+            if (listenHukamnama) {
+                notificationIntent = setPlayRadio(notificationIntent);
             }
             PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             notification.setContentIntent(contentIntent);
@@ -86,7 +116,10 @@ public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
                     .setContentText(pMessage);
             Intent notificationIntent = new Intent(this, SplashScreen.class);
             if (showHukamNama) {
-                notificationIntent.putExtra(Constant.hukamnama, showHukamNama);
+                notificationIntent = setHukamnamSahib(notificationIntent);
+            }
+            if (listenHukamnama) {
+                notificationIntent = setPlayRadio(notificationIntent);
             }
             PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             builder.setContentIntent(contentIntent);
@@ -109,6 +142,66 @@ public class MyFirebaseInstanceIdService extends FirebaseMessagingService {
             Constant.player.prepare(mediaSource);
             Constant.player.setPlayWhenReady(true);
             Constant.RadioIsplay = true;
+        }
+    }
+
+    private Intent setHukamnamSahib(Intent notificationIntent) {
+        if (notificationIntent == null) {
+            notificationIntent.setAction("com.hukamnamasahib");
+        }
+        notificationIntent.putExtra(Constant.hukamnama, true);
+        return notificationIntent;
+    }
+
+    private Intent setPlayRadio(Intent notificationIntent) {
+        if (notificationIntent == null) {
+            notificationIntent.setAction("com.playradio");
+        }
+        notificationIntent.putExtra(Constant.playRadio, true);
+        return notificationIntent;
+    }
+
+    public void showBackgroundNotification(RemoteMessage pRemoteMessage) {
+        if (pRemoteMessage.getNotification() != null) {
+            String message = pRemoteMessage.getNotification().getBody();
+            if (message != null && !message.isEmpty()) {
+                NotificationData data = new Gson().fromJson(message, NotificationData.class);
+                if (data != null) {
+                    if (data.pHukamnamaShib != null && data.pHukamnamaShib) {
+                        showMessage(
+                                "101",
+                                "akaltakhatsahibapp",
+                                getResources().getString(R.string.app_name),
+                                data.pDesc,
+                                false,
+                                true,
+                                false
+                        );
+                    }
+                    if (data.pPlayRadio != null && data.pPlayRadio) {
+                        showMessage(
+                                "101",
+                                "akaltakhatsahibapp",
+                                getResources().getString(R.string.app_name),
+                                data.pDesc,
+                                true,
+                                false,
+                                false
+                        );
+                    }
+                    if (data.pMessage != null && !data.pMessage.isEmpty()) {
+                        showMessage(
+                                "101",
+                                "akaltakhatsahibapp",
+                                getResources().getString(R.string.app_name),
+                                data.pDesc,
+                                false,
+                                false,
+                                true
+                        );
+                    }
+                }
+            }
         }
     }
 }

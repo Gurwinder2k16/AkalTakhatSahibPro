@@ -129,7 +129,9 @@ public class SplashScreen extends AppCompatActivity {
 
     private void proceedAfterPermission() {
         //We've got the permission, now we can proceed further
-        if (getIntent().hasExtra(Constant.hukamnama)) {
+        final Bundle bundle = getIntent().getExtras();
+        if ((bundle != null && bundle.containsKey(Constant.hukamnama)) || (getIntent().hasExtra(Constant.hukamnama)
+                && getIntent().getBooleanExtra(Constant.hukamnama, false))) {
             Intent i = new Intent(SplashScreen.this, HukamnamaPDF.class);
             startActivity(i);
             finish();
@@ -138,6 +140,9 @@ public class SplashScreen extends AppCompatActivity {
                 @Override
                 public void run() {
                     Intent i = new Intent(SplashScreen.this, MenuDrawer.class);
+                    if (bundle != null) {
+                        i.putExtras(bundle);
+                    }
                     startActivity(i);
                     finish();
                 }

@@ -62,7 +62,7 @@
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_weight="1"
                 android:background="@drawable/tiles_images"
-                android:gravity="center"
+                android:gravity="bottom|clip_vertical"
                 android:padding="@dimen/margin_layoutlist_10dp"
                 android:text="@string/how_to_bcm_sikh"
                 android:textAlignment="center"

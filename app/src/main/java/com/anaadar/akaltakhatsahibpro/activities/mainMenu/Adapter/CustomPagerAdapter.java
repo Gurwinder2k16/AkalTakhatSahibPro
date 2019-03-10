@@ -19,7 +19,7 @@ public class CustomPagerAdapter extends FragmentPagerAdapter {
     private static int NUM_ITEMS = 5;
     private FourPage fourPage;
     private InstrPage instrPage;
-    private FirstPage firstPage;
+    public FirstPage firstPage;
     private SecondPage secondPage;
     private ThirdPage thirdPage;
 

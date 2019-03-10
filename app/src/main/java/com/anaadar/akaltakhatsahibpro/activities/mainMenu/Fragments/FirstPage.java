@@ -3,6 +3,7 @@ package com.anaadar.akaltakhatsahibpro.activities.mainMenu.Fragments;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.anaadar.akaltakhatsahibpro.R;
 import com.anaadar.akaltakhatsahibpro.activities.contactUS.ContactUs;
 import com.anaadar.akaltakhatsahibpro.activities.dailyHukamnama.HukamnamaPDF;
 import com.anaadar.akaltakhatsahibpro.activities.guru_sahiban.GuruSahibanMenus;
+import com.anaadar.akaltakhatsahibpro.activities.mainMenu.side_menu_page.MenuDrawer;
 import com.anaadar.akaltakhatsahibpro.activities.nitnem.BaniMenus;
 import com.anaadar.akaltakhatsahibpro.activities.pdfpresenterapi.PDFPRESENTER;
 import com.anaadar.akaltakhatsahibpro.constants.Constant;
@@ -61,6 +63,18 @@ public class FirstPage extends Fragment implements View.OnClickListener {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        if (getActivity() instanceof MenuDrawer) {
+            if (((MenuDrawer) getActivity()).checkAndPlay()) {
+                initExoplayer();
+                startActivity(new Intent(getActivity(), HukamnamaPDF.class));
+            }
+        }
+    }
+
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sundar_gutka:
@@ -94,7 +108,7 @@ public class FirstPage extends Fragment implements View.OnClickListener {
     /**
      *
      */
-    private void initExoplayer() {
+    public void initExoplayer() {
         if (Constant.haveNetworkConnection(getActivity())) {
             if (Constant.RadioIsplay) {
                 Constant.RadioIsplay = false;
