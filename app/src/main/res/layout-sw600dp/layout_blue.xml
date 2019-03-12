@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<com.anaadar.akaltakhatsahibpro.activities.nitnem.PageCurlFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.gurbanidarshan.activities.nitnem.PageCurlFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/pageCurlFrameLayout"
     android:layout_width="match_parent"
@@ -77,4 +77,4 @@
             app:layout_anchorGravity="bottom|right"
             app:srcCompat="@drawable/khanda" />
     </android.support.design.widget.CoordinatorLayout>
-</com.anaadar.akaltakhatsahibpro.activities.nitnem.PageCurlFrameLayout>
+</com.gurbanidarshan.activities.nitnem.PageCurlFrameLayout>

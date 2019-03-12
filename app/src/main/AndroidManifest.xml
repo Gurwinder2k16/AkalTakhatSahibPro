@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anaadar.akaltakhatsahibpro">
+    package="com.gurbanidarshan">
 
     <!--
          deep link urls
@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.SplashScreen"
+            android:name="com.gurbanidarshan.activities.SplashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
@@ -45,36 +45,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.contactUS.questionandsuggestions.Question"
+            android:name="com.gurbanidarshan.activities.contactUS.questionandsuggestions.Question"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.contactUS.questionandsuggestions.SuggestionsView"
+            android:name="com.gurbanidarshan.activities.contactUS.questionandsuggestions.SuggestionsView"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.contactUS.requests.Requests"
+            android:name="com.gurbanidarshan.activities.contactUS.requests.Requests"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.contactUS.ContactUs"
+            android:name="com.gurbanidarshan.activities.contactUS.ContactUs"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.contactUS.questionandsuggestions.MessageSendActivity"
+            android:name="com.gurbanidarshan.activities.contactUS.questionandsuggestions.MessageSendActivity"
             android:screenOrientation="portrait" />
         <!-- menu Details Activity -->
         <activity
-            android:name=".activities.nitnem.NitnemBani"
+            android:name="com.gurbanidarshan.activities.nitnem.NitnemBani"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.guru_sahiban.GuruSahibanHistory"
+            android:name="com.gurbanidarshan.activities.guru_sahiban.GuruSahibanHistory"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.news.NewsActivity"
+            android:name="com.gurbanidarshan.activities.news.NewsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.mainMenu.Menu"
+            android:name="com.gurbanidarshan.activities.mainMenu.Menu"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.dailyHukamnama.HukamnamaPDF"
+            android:name="com.gurbanidarshan.activities.dailyHukamnama.HukamnamaPDF"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.hukamnamasahib" />
@@ -82,16 +82,16 @@
         </activity>
         <!-- Menus -->
         <activity
-            android:name=".activities.nitnem.BaniMenus"
+            android:name="com.gurbanidarshan.activities.nitnem.BaniMenus"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.guru_sahiban.GuruSahibanMenus"
+            android:name="com.gurbanidarshan.activities.guru_sahiban.GuruSahibanMenus"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.pdfpresenterapi.PDFPRESENTER"
+            android:name="com.gurbanidarshan.activities.pdfpresenterapi.PDFPRESENTER"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.mainMenu.side_menu_page.MenuDrawer"
+            android:name="com.gurbanidarshan.activities.mainMenu.side_menu_page.MenuDrawer"
             android:label="@string/title_activity_menu_drawer"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -100,29 +100,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Webview.Contact_web"
+            android:name="com.gurbanidarshan.Webview.Contact_web"
             android:label="@string/title_activity_menu_drawer"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.About.Activities.AboutSGPC"
+            android:name="com.gurbanidarshan.activities.About.Activities.AboutSGPC"
             android:label="@string/sgpc_fullname"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.About.Activities.AboutAkalTakhatSahib"
+            android:name="com.gurbanidarshan.activities.About.Activities.AboutAkalTakhatSahib"
             android:label="@string/about_sri_akal_takhat_sahib_ji"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.PurposeOfApp"
+            android:name="com.gurbanidarshan.activities.PurposeOfApp"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
-        <service android:name=".services.MyFirebaseInstanceIdService">
+        <service android:name="com.gurbanidarshan.services.MyFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".services.MyFireBaseServices">
+        <service android:name="com.gurbanidarshan.services.MyFireBaseServices">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
